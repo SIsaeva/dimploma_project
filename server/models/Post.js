@@ -5,6 +5,6 @@ const schema = new Schema({
     content: {type: String, required: true},
     userId: {type: Schema.Types.ObjectId, ref: 'User', required: true}
 }, {
-    timestamps: true
+    timestamps: {createdAt: 'created_at'}
 })
 module.exports = model('Post', schema)

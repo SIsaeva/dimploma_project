@@ -60,7 +60,7 @@ router.post('/signUp', [
         }
     }])
 
-router.post('/signInWithPassword', [
+router.post('/signIn', [
     check('email', 'Email некорректный').normalizeEmail().isEmail(),
     check('password', 'Пароль не может быть пустым').exists(),
     async (req, res) => {
